@@ -97,8 +97,8 @@ if ("IntersectionObserver" in window && sections.length > 0) {
       });
     },
     {
-      threshold: 0.45,
-      rootMargin: "-20% 0px -45% 0px"
+      threshold: 0.3,
+      rootMargin: "-18% 0px -48% 0px"
     }
   );
 
