@@ -380,31 +380,15 @@ select {
   text-align: center;
 }
 
-.profile-placeholder {
+.profile-photo {
   width: min(100%, 260px);
   aspect-ratio: 1 / 1.12;
   margin: 0 auto 1.25rem;
   border-radius: 28px;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 40%),
-    linear-gradient(135deg, rgba(36, 87, 166, 0.16), rgba(23, 61, 120, 0.05));
-  border: 1px dashed rgba(36, 87, 166, 0.28);
-  display: grid;
-  place-items: center;
-  color: var(--color-accent);
-}
-
-.profile-placeholder span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 2rem;
-  font-weight: 700;
-  box-shadow: inset 0 0 0 1px rgba(36, 87, 166, 0.14);
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(36, 87, 166, 0.12);
+  box-shadow: 0 8px 24px rgba(24, 43, 74, 0.1);
 }
 
 .profile-caption {
