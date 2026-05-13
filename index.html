@@ -88,7 +88,7 @@
           </div>
 
           <p class="hero-summary">
-            Ranked 7/53 in Artificial Intelligence at Chongqing University. My current research focuses on interactive medical image segmentation using SAM-based architectures, with emphasis on semantic enhancement, prompt robustness, and scale-aware optimization. A manuscript on this work is in preparation.
+            Ranked 7/53 in Artificial Intelligence at Chongqing University. My current research focuses on SAM-based abdominal CT segmentation, with emphasis on organ-aware semantic prompting, geometry-guided prediction, and efficient local refinement. A manuscript on this work has been submitted to ICONIP.
           </p>
 
           <div class="hero-actions">
@@ -121,7 +121,7 @@
               <li><strong>Degree</strong><span>B.AI., Chongqing University</span></li>
               <li><strong>GPA</strong><span>3.45 / 4.0 &nbsp;·&nbsp; Rank 7 / 53</span></li>
               <li><strong>Focus</strong><span>Medical Image Segmentation</span></li>
-              <li><strong>Status</strong><span>Manuscript in Preparation</span></li>
+              <li><strong>Status</strong><span>Submitted to ICONIP</span></li>
             </ul>
           </div>
         </aside>
@@ -186,28 +186,28 @@
           <article class="timeline-card featured reveal">
             <div class="timeline-top">
               <p class="timeline-date">Dec. 2024 – Present</p>
-              <span class="status-pill">Manuscript in Preparation</span>
+              <span class="status-pill">Submitted to ICONIP</span>
             </div>
-            <h3>ASGP-SAM-Geo: Robust Interactive Medical Image Segmentation with Semantic Enhancement and Geometric Denoising</h3>
+            <h3>GASP-SAM: Lightweight Geometry-Aware Semantic Prompting for Abdominal Organ Segmentation</h3>
             <p class="card-meta">Project Leader</p>
             <p>
-              Research on interactive abdominal multi-organ segmentation for the FLARE22 benchmark, built on SAM ViT-B, aimed at improving the reliability of vision foundation models in medical imaging.
+              A two-stage SAM adaptation framework for box-prompted abdominal multi-organ CT segmentation, designed to reduce domain shift, add organ-specific semantics to spatial prompts, and correct local boundary errors without disrupting reliable coarse predictions.
             </p>
             <ul class="feature-list">
-              <li>Proposed a progressive framework addressing cross-modal semantic alignment, prompt-noise robustness, scale-aware fairness across organs, and stable optimization under uncertain supervision.</li>
-              <li>Designed a text-guided semantic enhancement module and auxiliary prototype branch to inject anatomical priors into class-agnostic visual representations.</li>
-              <li>Developed a Perturbation Module, Consistency Purifier, and AdaptiveSoftPurifier to estimate interaction reliability and convert hard denoising into continuous optimization.</li>
-              <li>Built a modular PyTorch pipeline with per-sample loss routing and purity-driven prompt caching, introducing no additional inference cost.</li>
+              <li>Adapted SAM ViT-B with LoRA while keeping the SAM prompt encoder and BioMedCLIP text encoder frozen, reaching strong medical-domain transfer with only 8.10M trainable parameters.</li>
+              <li>Designed organ-aware semantic prompt learning and TextCIM cross-modal interaction to inject anatomical identity into dense SAM image features.</li>
+              <li>Introduced geometry-guided residual fusion with boundary, center, and signed-distance cues so structural priors remain active during inference.</li>
+              <li>Built a prior-guided local residual refiner that trains only 0.72M parameters and updates compact ROIs while preserving coarse logits outside the refinement region.</li>
             </ul>
-            <p class="result-heading">Performance vs. nnU-Net on FLARE22</p>
+            <p class="result-heading">Controlled Box-Prompt Results</p>
             <div class="result-grid">
               <div>
-                <span class="result-label">Dice Improvements</span>
-                <p>Right kidney +0.25, left kidney +1.30, aorta +6.72, stomach +1.96</p>
+                <span class="result-label">FLARE22 Common 8 Organs</span>
+                <p>90.86% Dice with 8.10M trainable parameters</p>
               </div>
               <div>
-                <span class="result-label">NSD Improvements</span>
-                <p>Pancreas +13.15, stomach +13.91, aorta +14.41, esophagus +8.84</p>
+                <span class="result-label">Synapse Benchmark</span>
+                <p>87.82% Dice and 4.45 mm mean HD95</p>
               </div>
             </div>
           </article>
