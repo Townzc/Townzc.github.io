@@ -265,7 +265,8 @@ select {
 .hero-badges,
 .tag-group,
 .hero-links,
-.contact-actions {
+.contact-actions,
+.project-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
@@ -276,10 +277,15 @@ select {
 .status-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
   font-size: 0.84rem;
   font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  overflow-wrap: anywhere;
   border: 1px solid transparent;
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
@@ -292,6 +298,10 @@ select {
 .hero-actions,
 .contact-actions {
   margin-top: 1.5rem;
+}
+
+.project-actions {
+  margin-top: 1.35rem;
 }
 
 .button {
@@ -629,7 +639,6 @@ select {
 .status-pill {
   background: rgba(36, 87, 166, 0.1);
   color: var(--color-accent);
-  white-space: nowrap;
 }
 
 .status-pill-muted {

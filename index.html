@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tang Zhice — undergraduate AI researcher at Chongqing University, focusing on computer vision, medical image segmentation, and vision foundation models.">
-  <meta name="keywords" content="Tang Zhice, undergraduate researcher, Chongqing University, computer vision, medical image analysis, vision foundation models, multimodal learning">
+  <meta name="description" content="Tang Zhice — undergraduate AI researcher at Chongqing University, focusing on computer vision, medical image segmentation, vision foundation models, and full-stack AI applications.">
+  <meta name="keywords" content="Tang Zhice, undergraduate researcher, Chongqing University, computer vision, medical image analysis, vision foundation models, multimodal learning, full-stack AI products, Next.js, Supabase">
   <meta name="author" content="Tang Zhice">
   <meta property="og:title" content="Tang Zhice — Undergraduate Researcher in AI">
   <meta property="og:description" content="Academic homepage of Tang Zhice, an AI researcher at Chongqing University working on medical image segmentation and vision foundation models.">
@@ -62,7 +62,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="#research" class="nav-link">Research</a>
+        <a href="#research" class="nav-link">Projects</a>
         <a href="#industry" class="nav-link">Experience</a>
         <a href="#awards" class="nav-link">Awards</a>
         <a href="#skills" class="nav-link">Skills</a>
@@ -85,6 +85,7 @@
             <span class="badge">Foundation Models</span>
             <span class="badge">Medical Imaging</span>
             <span class="badge">Multimodal Learning</span>
+            <span class="badge">Full-Stack AI Products</span>
           </div>
 
           <p class="hero-summary">
@@ -93,7 +94,7 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Contact Me</a>
-            <a class="button button-secondary" href="#research">View Research</a>
+            <a class="button button-secondary" href="#research">View Projects</a>
             <a class="button button-ghost" href="assets/docs/Tang_Zhice_CV.pdf" target="_blank" rel="noopener">Download CV</a>
           </div>
 
@@ -175,10 +176,10 @@
     <section class="section section-alt" id="research">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="section-kicker">Research</p>
-          <h2>Selected Projects</h2>
+          <p class="section-kicker">Research &amp; Product Engineering</p>
+          <h2>Selected Research &amp; Engineering Projects</h2>
           <p>
-            My research targets reliable visual understanding, particularly in medical imaging where interaction quality, domain knowledge, and model robustness are critical.
+            My work spans reliable visual understanding and deployable AI products, from medical image segmentation research to full-stack systems with production API, database, and storage integration.
           </p>
         </div>
 
@@ -209,6 +210,47 @@
                 <span class="result-label">Synapse Benchmark</span>
                 <p>87.82% Dice and 4.45 mm mean HD95</p>
               </div>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-top">
+              <p class="timeline-date">Personal Product Project</p>
+              <span class="status-pill">API + Database Deployment</span>
+            </div>
+            <h3>LiftCut Tracker: AI-Powered Fitness and Fat-Loss Tracking Platform</h3>
+            <p class="card-meta">Full-Stack Developer · Next.js 16, TypeScript, Supabase, DeepSeek API</p>
+            <p>
+              Built and deployed a clean, ad-free fitness tracking web application that combines training plans, workout logs, nutrition records, body metrics, and AI-generated coaching workflows. The project was designed as a real product rather than a static demo, with authenticated user data, server-side AI APIs, persistent database storage, and a guest-to-account migration path.
+            </p>
+            <ul class="feature-list">
+              <li>Implemented a Next.js App Router architecture with TypeScript, Tailwind CSS, shadcn/ui, Zustand, Zod validation, next-intl localization, Recharts dashboards, and PDF export through jsPDF.</li>
+              <li>Deployed server-side AI API routes for training-plan generation, nutrition-plan generation, plan saving, and AI history management, keeping the DeepSeek API key isolated in server-only environment variables.</li>
+              <li>Provisioned a Supabase backend with Auth, Postgres, Storage, row-level security policies, relational training/nutrition schemas, indexed user timelines, and an avatars bucket for profile media.</li>
+              <li>Designed a structured AI workflow: user profile and constraints are validated, DeepSeek returns schema-checked JSON, users preview and edit the result, and only confirmed plans are persisted.</li>
+              <li>Built guest mode with localStorage persistence, daily AI quota control, and one-click migration of training plans, workout logs, food logs, body metrics, and AI history into a formal account.</li>
+            </ul>
+            <p class="result-heading">Engineering Scope</p>
+            <div class="result-grid">
+              <div>
+                <span class="result-label">API Layer</span>
+                <p>5 AI endpoints with auth context, guest quota checks, Zod validation, error normalization, and generation history persistence.</p>
+              </div>
+              <div>
+                <span class="result-label">Database Layer</span>
+                <p>Supabase Postgres schema covering profiles, settings, plans, logs, metrics, AI histories, nutrition plans, indexes, RLS, and Storage policies.</p>
+              </div>
+              <div>
+                <span class="result-label">Product Experience</span>
+                <p>Dashboard, onboarding, training, nutrition, body metrics, settings, bilingual UI, avatar upload, and PDF plan export.</p>
+              </div>
+              <div>
+                <span class="result-label">Reliability Design</span>
+                <p>Server-only AI calls, schema-first parsing, profile-completion guards, safe fallback states, and account data migration.</p>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a class="button button-secondary" href="https://github.com/Townzc/liftcut-tracker" target="_blank" rel="noopener">View Repository</a>
             </div>
           </article>
 
@@ -301,16 +343,28 @@
             <div class="tag-group">
               <span class="tag">Python</span>
               <span class="tag">C++</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
             </div>
           </article>
 
           <article class="card reveal">
-            <h3>Frameworks &amp; Tools</h3>
+            <h3>Frameworks, Platforms &amp; Tools</h3>
             <div class="tag-group">
               <span class="tag">PyTorch</span>
               <span class="tag">TensorFlow / Keras</span>
               <span class="tag">OpenCV</span>
               <span class="tag">Flask</span>
+              <span class="tag">Next.js / React</span>
+              <span class="tag">Supabase Auth / Postgres / Storage</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">shadcn/ui</span>
+              <span class="tag">Zod / Zustand</span>
+              <span class="tag">DeepSeek API</span>
+              <span class="tag">REST API Deployment</span>
+              <span class="tag">Database Deployment</span>
+              <span class="tag">Recharts</span>
+              <span class="tag">jsPDF</span>
               <span class="tag">Git / GitHub</span>
               <span class="tag">Hugging Face</span>
             </div>
