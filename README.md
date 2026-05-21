@@ -24,7 +24,7 @@ The site emphasizes:
 |-- README.md
 `-- assets/
     |-- docs/
-    |   `-- Tang_Zhice_CV.pdf        # add your CV here
+    |   `-- Zhice_Tang_cv.pdf        # add your CV here
     `-- images/
         `-- profile.jpg              # add your profile photo here
 ```
@@ -44,8 +44,8 @@ The site emphasizes:
 
 ### Update the CV Link
 
-1. Place your English CV PDF at `assets/docs/Tang_Zhice_CV.pdf`.
-2. In `index.html`, replace the disabled `Download CV` placeholder element with a link to `assets/docs/Tang_Zhice_CV.pdf`.
+1. Place your English CV PDF at `assets/docs/Zhice_Tang_cv.pdf`.
+2. In `index.html`, replace the disabled `Download CV` placeholder element with a link to `assets/docs/Zhice_Tang_cv.pdf`.
 3. If your file name is different, update the `href` value accordingly.
 
 ### Edit the Content
