@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Zhice Tang is an undergraduate AI researcher at Chongqing University and a Fall 2026 exchange student at UC Berkeley, working on computer vision, multimodal learning, EEG foundation models, and reliable AI systems.">
+  <meta name="description" content="Zhice Tang is an undergraduate AI researcher at Chongqing University and a Fall 2026 exchange student at UC Berkeley, working with Prof. Chenyu You at Stony Brook University on scalable EEG foundation models.">
   <meta name="author" content="Zhice Tang">
   <meta property="og:title" content="Zhice Tang">
   <meta property="og:description" content="Research, projects, and notes from Zhice Tang.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://townzc.github.io/">
   <title>Zhice Tang</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260826-1">
   <script>
     const savedTheme = localStorage.getItem("theme");
     const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -58,24 +58,29 @@
 
   <main class="container" id="main-content">
     <section class="intro" id="top" aria-labelledby="intro-title">
+      <figure class="profile">
+        <img src="assets/images/profile.jpg?v=20260826-1" alt="Portrait of Zhice Tang" width="800" height="800">
+      </figure>
+
       <div class="intro-copy">
         <p class="role">Undergraduate Student @ Chongqing University · Exchange Student @ UC Berkeley</p>
-        <h1 id="intro-title">Zhice Tang <span>唐执策</span></h1>
+        <h1 id="intro-title">Zhice Tang</h1>
 
         <p>
-          Hi! I am an undergraduate student in Artificial Intelligence at
+          Hi, I am Zhice Tang (唐执策). I am an undergraduate student in Artificial Intelligence at
           <a href="https://english.cqu.edu.cn/" target="_blank" rel="noopener">Chongqing University</a>
           and a Fall 2026 exchange student at the
           <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">University of California, Berkeley</a>.
         </p>
         <p>
-          My research interests lie in computer vision, multimodal learning, image and video generation,
-          and foundation models for visual and biomedical signals. I am currently collaborating on scalable
-          EEG foundation-model pipelines spanning 500+ heterogeneous datasets.
+          I am currently conducting research with
+          <a href="https://chenyuyou.me/index.html" target="_blank" rel="noopener">Prof. Chenyu You</a>
+          at <a href="https://www.stonybrook.edu/" target="_blank" rel="noopener">Stony Brook University</a>,
+          focusing on scalable EEG foundation models across heterogeneous datasets.
         </p>
         <p>
-          I also enjoy building reliable AI products, from parameter-efficient medical image models to
-          structured-generation systems that turn model outputs into useful, verifiable software.
+          My research interests lie in computer vision, multimodal learning, image and video generation,
+          and foundation models for visual and biomedical signals.
         </p>
 
         <div class="contact-links" aria-label="Contact and profile links">
@@ -84,10 +89,6 @@
           <a href="assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">CV</a>
         </div>
       </div>
-
-      <figure class="profile">
-        <img src="assets/images/profile.jpg" alt="Portrait of Zhice Tang" width="800" height="800">
-      </figure>
     </section>
 
     <section class="section" aria-labelledby="interests-title">
@@ -105,10 +106,11 @@
         <h2 id="news-title">News</h2>
       </div>
       <div class="news-list">
+        <p><time datetime="2026-08">Aug 2026</time><span>GASP-SAM was accepted at ICONIP 2026.</span></p>
         <p><time datetime="2026-08">Aug 2026</time><span>Started my Fall exchange at UC Berkeley with the Berkeley Global Access Scholarship.</span></p>
         <p><time datetime="2026-07">Jul 2026</time><span>Our alpha-label-free image matting work is under review at AAAI.</span></p>
-        <p><time datetime="2026-06">Jun 2026</time><span>Started collaborating on scalable EEG foundation models across heterogeneous datasets.</span></p>
-        <p><time datetime="2025">2025</time><span>GASP-SAM was accepted at ICONIP.</span></p>
+        <p><time datetime="2026-06">Jun 2026</time><span>Started working with Prof. Chenyu You at Stony Brook University on scalable EEG foundation models.</span></p>
+        <p><time datetime="2026-05">May 2026</time><span>Submitted GASP-SAM to ICONIP 2026.</span></p>
       </div>
     </section>
 
@@ -133,7 +135,7 @@
         </article>
 
         <article class="work-item">
-          <div class="work-meta"><span>2025</span><span class="status accepted">Accepted · ICONIP</span></div>
+          <div class="work-meta"><span>2026</span><span class="status accepted">Accepted · ICONIP 2026</span></div>
           <div class="work-content">
             <h3>GASP-SAM: Lightweight Geometry-Aware Semantic Prompting for Abdominal Organ Segmentation</h3>
             <p class="work-role">Project Leader</p>
@@ -209,6 +211,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260826-1"></script>
 </body>
 </html>

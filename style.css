@@ -201,11 +201,8 @@ a:focus-visible {
 }
 
 .intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: clamp(2.5rem, 7vw, 5.5rem);
-  align-items: start;
-  padding: clamp(4.5rem, 10vw, 7.5rem) 0 3.4rem;
+  display: flow-root;
+  padding: clamp(4.5rem, 10vw, 7rem) 0 3.4rem;
 }
 
 .role {
@@ -235,8 +232,8 @@ h2 {
 }
 
 h1 {
-  margin-bottom: 1.6rem;
-  font-size: clamp(2.45rem, 6vw, 3.75rem);
+  margin-bottom: 1.35rem;
+  font-size: clamp(2.3rem, 5vw, 3rem);
   font-weight: 650;
 }
 
@@ -294,9 +291,9 @@ h3 {
 }
 
 .profile {
-  margin: 0;
-  width: 180px;
-  justify-self: end;
+  float: right;
+  width: 164px;
+  margin: 0.35rem 0 1.5rem clamp(2rem, 6vw, 4.5rem);
 }
 
 .profile img {
@@ -603,20 +600,13 @@ footer {
   }
 
   .intro {
-    grid-template-columns: 1fr;
-    gap: 2.2rem;
     padding-top: 3.8rem;
   }
 
   .profile {
-    order: -1;
-    width: min(42vw, 150px);
-    justify-self: start;
-  }
-
-  h1 span {
-    display: block;
-    margin: 0.28rem 0 0;
+    float: none;
+    width: min(38vw, 138px);
+    margin: 0 0 1.75rem;
   }
 
   .news-list p,
