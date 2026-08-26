@@ -295,25 +295,21 @@ h3 {
 
 .profile {
   margin: 0;
+  width: 180px;
+  justify-self: end;
 }
 
 .profile img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 20%;
-  border: 1px solid var(--border);
-  border-radius: 0.3rem;
+  object-position: center;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  outline: 1px solid var(--border);
   box-shadow: var(--shadow);
   filter: saturate(0.88) contrast(1.02);
-}
-
-.profile figcaption {
-  margin-top: 0.55rem;
-  color: var(--faint);
-  font-size: 0.78rem;
-  text-align: right;
 }
 
 .section {
@@ -614,11 +610,8 @@ footer {
 
   .profile {
     order: -1;
-    width: min(48vw, 170px);
-  }
-
-  .profile figcaption {
-    text-align: left;
+    width: min(42vw, 150px);
+    justify-self: start;
   }
 
   h1 span {
