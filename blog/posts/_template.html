@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Post title · Zhice Tang</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = savedTheme || preferredTheme;
+  </script>
+</head>
+<body data-page="post">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="wordmark" href="../../">Zhice Tang</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Open navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="../">Blog</a>
+        <a href="../../assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">CV</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="post-shell">
+    <header>
+      <p class="post-date"><time datetime="2026-01-01">Jan 01, 2026</time></p>
+      <h1>Post title</h1>
+      <p>One-sentence summary.</p>
+    </header>
+    <article>
+      <p>Start writing here.</p>
+      <h2>Section heading</h2>
+      <p>Continue the post here.</p>
+    </article>
+  </main>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

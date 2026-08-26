@@ -1,475 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tang Zhice is an undergraduate AI researcher at Chongqing University and a Fall 2026 exchange student at UC Berkeley, working on EEG and vision foundation models and full-stack AI applications.">
-  <meta name="keywords" content="Tang Zhice, undergraduate researcher, Chongqing University, UC Berkeley exchange student, EEG foundation models, computer vision, medical image analysis, multimodal learning, full-stack AI products">
-  <meta name="author" content="Tang Zhice">
-  <meta property="og:title" content="Tang Zhice — Undergraduate Researcher in AI">
-  <meta property="og:description" content="Academic homepage of Tang Zhice, an AI researcher at Chongqing University and Fall 2026 exchange student at UC Berkeley, working on EEG and vision foundation models.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhice Tang is an undergraduate AI researcher at Chongqing University and a Fall 2026 exchange student at UC Berkeley, working on computer vision, multimodal learning, EEG foundation models, and reliable AI systems.">
+  <meta name="author" content="Zhice Tang">
+  <meta property="og:title" content="Zhice Tang">
+  <meta property="og:description" content="Research, projects, and notes from Zhice Tang.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://townzc.github.io/">
-  <title>Tang Zhice — Undergraduate Researcher in AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Zhice Tang</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = savedTheme || preferredTheme;
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Tang Zhice",
+      "name": "Zhice Tang",
+      "alternateName": "唐执策",
+      "url": "https://townzc.github.io/",
+      "email": "mailto:townzc1@gmail.com",
       "jobTitle": "Undergraduate AI Researcher",
       "affiliation": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Chongqing University"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "University of California, Berkeley",
-          "description": "Exchange student, August to December 2026"
-        }
+        {"@type": "CollegeOrUniversity", "name": "Chongqing University"},
+        {"@type": "CollegeOrUniversity", "name": "University of California, Berkeley"}
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chongqing",
-        "addressCountry": "China"
-      },
-      "email": "mailto:townzc1@gmail.com",
-      "sameAs": [
-        "https://github.com/Townzc"
-      ]
+      "sameAs": ["https://github.com/Townzc"]
     }
   </script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container nav-shell">
-      <a class="brand" href="#hero" aria-label="Home">
-        <span class="brand-mark">TZ</span>
-        <span class="brand-text"><strong>Tang Zhice</strong></span>
-      </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-nav"
-        aria-label="Open navigation menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Zhice Tang, home">Zhice Tang</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Open navigation</span>
+        <span></span><span></span><span></span>
       </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#research" class="nav-link">Projects</a>
-        <a href="#industry" class="nav-link">Experience</a>
-        <a href="#awards" class="nav-link">Awards</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-    </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="blog/">Blog</a>
+        <a href="assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">CV</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <main id="main-content">
+  <main class="container" id="main-content">
+    <section class="intro" id="top" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="role">Undergraduate Student @ Chongqing University · Exchange Student @ UC Berkeley</p>
+        <h1 id="intro-title">Zhice Tang <span>唐执策</span></h1>
 
-    <section class="hero section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Undergraduate AI Researcher &middot; Fall 2026 UC Berkeley Exchange</p>
-          <h1>Tang Zhice</h1>
-          <p class="hero-title">Researching foundation models for medical imaging and brain signals.</p>
+        <p>
+          Hi! I am an undergraduate student in Artificial Intelligence at
+          <a href="https://english.cqu.edu.cn/" target="_blank" rel="noopener">Chongqing University</a>
+          and a Fall 2026 exchange student at the
+          <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">University of California, Berkeley</a>.
+        </p>
+        <p>
+          My research interests lie in computer vision, multimodal learning, image and video generation,
+          and foundation models for visual and biomedical signals. I am currently collaborating on scalable
+          EEG foundation-model pipelines spanning 500+ heterogeneous datasets.
+        </p>
+        <p>
+          I also enjoy building reliable AI products, from parameter-efficient medical image models to
+          structured-generation systems that turn model outputs into useful, verifiable software.
+        </p>
 
-          <div class="hero-badges" aria-label="Research keywords">
-            <span class="badge">Computer Vision</span>
-            <span class="badge">Foundation Models</span>
-            <span class="badge">EEG Representation Learning</span>
-            <span class="badge">Medical Imaging</span>
-            <span class="badge">Multimodal Learning</span>
-            <span class="badge">Full-Stack AI Products</span>
-          </div>
-
-          <p class="hero-summary">
-            Ranked 7/53 in Artificial Intelligence at Chongqing University. I am currently collaborating with Prof. Chenyu You at Stony Brook University on scalable EEG foundation models. From August through December 2026, I will be an exchange student at the University of California, Berkeley.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Contact Me</a>
-            <a class="button button-secondary" href="#research">View Projects</a>
-            <a class="button button-ghost" href="assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">Download CV</a>
-          </div>
-
-          <ul class="hero-links" aria-label="Quick links">
-            <li><a href="mailto:townzc1@gmail.com">townzc1@gmail.com</a></li>
-            <!-- Replace the GitHub URL below if your profile link changes -->
-            <li><a href="https://github.com/Townzc" target="_blank" rel="noopener">GitHub</a></li>
-            <!-- Optional: add Google Scholar link here when available -->
-          </ul>
+        <div class="contact-links" aria-label="Contact and profile links">
+          <a href="mailto:townzc1@gmail.com">Email</a>
+          <a href="https://github.com/Townzc" target="_blank" rel="noopener">GitHub</a>
+          <a href="assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">CV</a>
         </div>
+      </div>
 
-        <aside class="hero-visual reveal" aria-label="Profile">
-          <div class="profile-card">
-            <!-- Replace with your own photo at assets/images/profile.jpg -->
-            <img class="profile-photo" src="assets/images/profile.jpg" alt="Portrait of Tang Zhice">
-            <div class="profile-caption">
-              <strong>Tang Zhice</strong>
-              <span>Chongqing University &middot; UC Berkeley Exchange, Fall 2026</span>
-            </div>
-          </div>
+      <figure class="profile">
+        <img src="assets/images/profile.jpg" alt="Portrait of Zhice Tang" width="520" height="650">
+        <figcaption>Berkeley, Fall 2026</figcaption>
+      </figure>
+    </section>
 
-          <div class="highlight-card">
-            <p class="highlight-label">Academic Snapshot</p>
-            <ul class="highlight-list">
-              <li><strong>Degree</strong><span>B.AI., Chongqing University</span></li>
-              <li><strong>GPA</strong><span>3.52 / 4.0 &nbsp;&middot;&nbsp; Rank 7 / 53</span></li>
-              <li><strong>Focus</strong><span>EEG &amp; Vision Foundation Models</span></li>
-              <li><strong>Exchange</strong><span>UC Berkeley &middot; Aug. - Dec. 2026</span></li>
-              <li><strong>Status</strong><span>Research Collaborator, Stony Brook University</span></li>
-            </ul>
-          </div>
-        </aside>
+    <section class="section" aria-labelledby="interests-title">
+      <h2 id="interests-title">Research Interests</h2>
+      <ul class="interest-list">
+        <li>Computer Vision</li>
+        <li>Multimodal Large Language Models</li>
+        <li>Image &amp; Video Generation</li>
+        <li>Foundation Models for Biomedical Signals</li>
+      </ul>
+    </section>
+
+    <section class="section" id="news" aria-labelledby="news-title">
+      <div class="section-heading">
+        <h2 id="news-title">News</h2>
+      </div>
+      <div class="news-list">
+        <p><time datetime="2026-08">Aug 2026</time><span>Started my Fall exchange at UC Berkeley with the Berkeley Global Access Scholarship.</span></p>
+        <p><time datetime="2026-07">Jul 2026</time><span>Our alpha-label-free image matting work is under review at AAAI.</span></p>
+        <p><time datetime="2026-06">Jun 2026</time><span>Started collaborating on scalable EEG foundation models across heterogeneous datasets.</span></p>
+        <p><time datetime="2025">2025</time><span>GASP-SAM was accepted at ICONIP.</span></p>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">About</p>
-          <h2>Academic Background</h2>
-          <p>
-            Pursuing a B.AI. at Chongqing University (School of Big Data &amp; Software Engineering), with research experience in medical image analysis, EEG foundation models, and deployable AI systems. I will join the University of California, Berkeley as an exchange student from August through December 2026.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <article class="card reveal">
-            <h3>Education</h3>
-            <p class="card-meta">Chongqing University</p>
-            <p>Sep. 2023 – Jun. 2027 (Expected)</p>
-            <p><strong>Bachelor of Artificial Intelligence</strong></p>
-            <p>School of Big Data &amp; Software Engineering</p>
-            <p><strong>GPA:</strong> 3.52 / 4.0 &nbsp;&nbsp; <strong>Rank:</strong> 7 / 53</p>
-            <p class="card-meta">University of California, Berkeley</p>
-            <p>Aug. 2026 &ndash; Dec. 2026</p>
-            <p><strong>Exchange Student</strong></p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Core Coursework</h3>
-            <ul class="coursework-list">
-              <li><span>Deep Learning</span><strong>95<small>/100</small></strong></li>
-              <li><span>Statistical Analysis</span><strong>96<small>/100</small></strong></li>
-              <li><span>Data Structures</span><strong>93<small>/100</small></strong></li>
-              <li><span>Programming Techniques</span><strong>96<small>/100</small></strong></li>
-            </ul>
-          </article>
-
-          <article class="card reveal">
-            <h3>Research Interests</h3>
-            <div class="tag-group">
-              <span class="tag">Computer Vision</span>
-              <span class="tag">EEG Foundation Models</span>
-              <span class="tag">Multimodal Large Language Models</span>
-              <span class="tag">Image &amp; Video Generation</span>
-              <span class="tag">Embodied AI</span>
-              <span class="tag">Medical Image Analysis</span>
-            </div>
-          </article>
-        </div>
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <h2 id="research-title">Selected Research</h2>
+        <p>Work on efficient supervision and parameter-efficient adaptation for visual understanding.</p>
       </div>
-    </section>
 
-    <section class="section section-alt" id="research">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Research &amp; Product Engineering</p>
-          <h2>Selected Research &amp; Engineering Projects</h2>
-          <p>
-            My work spans brain and vision foundation models alongside deployable AI products, from scalable EEG representation learning and medical image segmentation to reliable full-stack systems.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-card featured reveal">
-            <div class="timeline-top">
-              <p class="timeline-date">June 2026 &ndash; Present</p>
-              <span class="status-pill">Stony Brook University</span>
-            </div>
-            <h3>EEG Foundation Models</h3>
-            <p class="card-meta">Research Collaborator &middot; with Prof. Chenyu You</p>
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-meta"><span>2026</span><span class="status">Under Review · AAAI</span></div>
+          <div class="work-content">
+            <h3>Affinity-Guided Filtering for Image Matting without Alpha Labels</h3>
+            <p class="work-role">Research Collaborator</p>
             <p>
-              Conducting research on scalable EEG representation learning for multi-subject, multi-channel, and multi-task brain-signal data.
+              An alpha-label-free semi-supervised matting framework that refines model predictions with an
+              Affinity-Guided Filtering Function and reuses them as pseudo-labels. The approach recovers fine
+              transition details on AM-2K, P3M-10K, and LIDC without additional inference-time computation.
             </p>
-            <ul class="feature-list">
-              <li>Surveying EEG and brain foundation models, including masked EEG modeling, channel-aware tokenization, temporal-spatial representation learning, contrastive alignment, and downstream decoding strategies.</li>
-              <li>Investigating robust EEG representations that improve cross-subject and cross-dataset generalization across acquisition settings, tasks, sampling rates, and electrode layouts.</li>
-              <li>Preparing experimental pipelines for EEG preprocessing, segmentation, normalization, dataset organization, and evaluation on classification, decoding, and representation-transfer tasks.</li>
-            </ul>
-          </article>
+          </div>
+        </article>
 
-          <article class="timeline-card reveal">
-            <div class="timeline-top">
-              <p class="timeline-date">Dec. 2024 &ndash; May 2025</p>
-              <span class="status-pill status-pill-muted">Completed</span>
-            </div>
+        <article class="work-item">
+          <div class="work-meta"><span>2025</span><span class="status accepted">Accepted · ICONIP</span></div>
+          <div class="work-content">
             <h3>GASP-SAM: Lightweight Geometry-Aware Semantic Prompting for Abdominal Organ Segmentation</h3>
-            <p class="card-meta">Project Leader</p>
+            <p class="work-role">Project Leader</p>
             <p>
-              A two-stage SAM adaptation framework for box-prompted abdominal multi-organ CT segmentation, designed to reduce domain shift, add organ-specific semantics to spatial prompts, and correct local boundary errors without disrupting reliable coarse predictions.
+              A parameter-efficient SAM ViT-B adaptation combining LoRA, BioMedCLIP semantic prompting,
+              geometry-guided residual fusion, and local boundary refinement. It achieved 90.86% mean Dice on
+              FLARE22 and 87.82% on Synapse with 8.10M trainable parameters.
             </p>
-            <ul class="feature-list">
-              <li>Adapted SAM ViT-B with LoRA while keeping the SAM prompt encoder and BioMedCLIP text encoder frozen, reaching strong medical-domain transfer with only 8.10M trainable parameters.</li>
-              <li>Designed organ-aware semantic prompt learning and TextCIM cross-modal interaction to inject anatomical identity into dense SAM image features.</li>
-              <li>Introduced geometry-guided residual fusion with boundary, center, and signed-distance cues so structural priors remain active during inference.</li>
-              <li>Built a compact local residual refiner that corrects boundary errors only within ROI regions, avoiding unnecessary modification of reliable coarse predictions.</li>
-              <li>Implemented the full PyTorch training and evaluation pipeline, including LoRA adaptation, semantic-geometry supervision, staged training, and 3D reconstruction-based evaluation.</li>
-            </ul>
-            <p class="result-heading">Controlled Box-Prompt Results</p>
-            <div class="result-grid">
-              <div>
-                <span class="result-label">FLARE22 Common 8 Organs</span>
-                <p>90.86% Dice with 8.10M trainable parameters</p>
-              </div>
-              <div>
-                <span class="result-label">Synapse Benchmark</span>
-                <p>87.82% mean Dice</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-card reveal">
-            <div class="timeline-top">
-              <p class="timeline-date">Mar. 2026 &ndash; Present</p>
-              <span class="status-pill">Full-Stack AI Product</span>
-            </div>
-            <h3>LiftCut Tracker: AI-Powered Fitness and Fat-Loss Tracking Platform</h3>
-            <p class="card-meta">Project Developer &middot; LLM Applications and Product Engineering</p>
-            <p>
-              Building a full-stack AI fitness and fat-loss tracking platform that brings together training plans, workout logs, nutrition records, body metrics, onboarding, profile management, PDF export, and guest-to-account migration.
-            </p>
-            <ul class="feature-list">
-              <li>Designed a reliable AI plan-generation workflow that validates user constraints, extracts, unwraps, and normalizes LLM outputs, then applies strict Zod checks before users preview, edit, and persist training or nutrition plans.</li>
-              <li>Built a multi-provider AI backend that supports DeepSeek, OpenAI-compatible APIs, and local vLLM serving, with provider-specific configuration and timeout handling for cloud and self-hosted models.</li>
-              <li>Fine-tuned LiftCut-Coach, a Qwen2.5-14B-Instruct LoRA adapter, and developed an evaluation pipeline over 293 held-out cases for structured AI plan generation.</li>
-            </ul>
-            <p class="result-heading">Selected Outcomes</p>
-            <div class="result-grid">
-              <div>
-                <span class="result-label">Schema Reliability</span>
-                <p>100% final schema pass on 293 held-out cases.</p>
-              </div>
-              <div>
-                <span class="result-label">Constraint Satisfaction</span>
-                <p>99.66% constraint pass for structured AI plan generation.</p>
-              </div>
-              <div>
-                <span class="result-label">Model</span>
-                <p>LiftCut-Coach, a Qwen2.5-14B-Instruct LoRA adapter.</p>
-              </div>
-              <div>
-                <span class="result-label">Deployment Flexibility</span>
-                <p>Cloud, OpenAI-compatible, and local vLLM model providers.</p>
-              </div>
-            </div>
-            <div class="project-actions">
-              <a class="button button-secondary" href="https://github.com/Townzc/liftcut-tracker" target="_blank" rel="noopener">View Repository</a>
-            </div>
-          </article>
-
-          <article class="timeline-card reveal">
-            <div class="timeline-top">
-              <p class="timeline-date">Aug. 2024 – Sep. 2024</p>
-              <span class="status-pill status-pill-muted">Completed</span>
-            </div>
-            <h3>Real-time Face Recognition System</h3>
-            <p class="card-meta">Project Developer</p>
-            <p>
-              End-to-end face recognition system covering data collection, CNN training, and web-based inference.
-            </p>
-            <ul class="feature-list">
-              <li>Automated face data acquisition with OpenCV and Haar Cascade detection for structured per-person dataset creation.</li>
-              <li>Trained a two-layer CNN using TensorFlow/Keras with max-pooling, a 1024-unit FC layer, and Adam optimization for multi-class classification.</li>
-              <li>Deployed the model as a Flask web application supporting both image-upload and real-time video-stream recognition.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="industry">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Industry</p>
-          <h2>Professional Experience</h2>
-        </div>
-
-        <article class="card experience-card reveal">
-          <div class="experience-header">
-            <div>
-              <h3>CITIC Securities</h3>
-              <p class="card-meta">Research Intern</p>
-            </div>
-            <div class="experience-meta">
-              <span>Beijing, China</span>
-              <span>Jan. 2024 – Feb. 2024</span>
-            </div>
           </div>
-          <ul class="feature-list">
-            <li>Collected, cleaned, and organized market and company data from multiple sources for industry research.</li>
-            <li>Performed data analysis and visualization to support sector trend tracking and investment research.</li>
-            <li>Contributed to research reporting by summarizing industry developments and comparing company performance.</li>
-          </ul>
         </article>
       </div>
     </section>
 
-    <section class="section section-alt" id="awards">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Awards &amp; Leadership</p>
-          <h2>Recognition</h2>
-        </div>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Projects</h2>
+      </div>
 
-        <div class="two-column-grid">
-          <article class="card reveal">
-            <h3>Scholarships &amp; Honors</h3>
-            <ul class="clean-list">
-              <li>Second-Prize Academic Scholarship, Chongqing University, 2024</li>
-              <li>Third-Prize Academic Scholarship, Chongqing University, 2025</li>
-              <li>Merit Student Award, Chongqing University, 2025</li>
-            </ul>
-          </article>
-
-          <article class="card reveal">
-            <h3>Leadership</h3>
-            <p class="card-meta">Captain, National Flag Guard Team</p>
-            <p>Chongqing University · Sep. 2023 – Present</p>
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-meta"><span>2026–Now</span><span class="status ongoing">Ongoing</span></div>
+          <div class="work-content">
+            <h3>EEG Foundation Models</h3>
+            <p class="work-role">Research Collaborator</p>
             <p>
-              Leading routine training, coordination, and ceremonial activities; responsible for team discipline and institutional representation at major campus events.
+              Building dataset discovery, metadata harmonization, deduplication, preprocessing, normalization,
+              and cross-dataset evaluation pipelines for 500+ EEG datasets. The research explores channel-aware
+              tokenization and temporal-spatial representations robust to subjects, tasks, sampling rates, and electrode layouts.
             </p>
-          </article>
-        </div>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta"><span>2026–Now</span><span class="status product">Open Source</span></div>
+          <div class="work-content">
+            <h3>LiftCut Tracker</h3>
+            <p class="work-role">Project Developer</p>
+            <p>
+              A full-stack fitness and fat-loss platform for training, nutrition, and body trends, with guest-to-account
+              migration and structured AI plan generation. LiftCut-Coach, a Qwen2.5-14B-Instruct LoRA adapter,
+              reached 100% final schema pass and 99.66% constraint pass on 293 held-out cases.
+            </p>
+            <div class="item-links">
+              <a href="https://www.liftcuttracker.com/" target="_blank" rel="noopener">Live site</a>
+              <a href="https://github.com/Townzc/liftcut-tracker" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Skills</p>
-          <h2>Technical Profile</h2>
+    <section class="section" id="blog" aria-labelledby="blog-title">
+      <div class="section-heading inline-heading">
+        <div>
+          <h2 id="blog-title">Latest Notes</h2>
+          <p>Research notes, project write-ups, and things I learn along the way.</p>
         </div>
-
-        <div class="skills-grid">
-          <article class="card reveal">
-            <h3>Programming</h3>
-            <div class="tag-group">
-              <span class="tag">Python</span>
-              <span class="tag">C++</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">JavaScript</span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <h3>Frameworks, Platforms &amp; Tools</h3>
-            <div class="tag-group">
-              <span class="tag">PyTorch</span>
-              <span class="tag">TensorFlow / Keras</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">Flask</span>
-              <span class="tag">Next.js / React</span>
-              <span class="tag">Supabase Auth / Postgres / Storage</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">shadcn/ui</span>
-              <span class="tag">Zod / Zustand</span>
-              <span class="tag">DeepSeek API</span>
-              <span class="tag">OpenAI-Compatible APIs</span>
-              <span class="tag">vLLM</span>
-              <span class="tag">REST API Deployment</span>
-              <span class="tag">Database Deployment</span>
-              <span class="tag">Recharts</span>
-              <span class="tag">jsPDF</span>
-              <span class="tag">Git / GitHub</span>
-              <span class="tag">Hugging Face</span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <h3>Research Skills</h3>
-            <div class="tag-group">
-              <span class="tag">Experimental Design</span>
-              <span class="tag">EEG Data Preprocessing</span>
-              <span class="tag">Model Fine-Tuning</span>
-              <span class="tag">Cross-Dataset Evaluation</span>
-              <span class="tag">Data Analysis &amp; Visualization</span>
-              <span class="tag">Scientific Writing</span>
-              <span class="tag">Literature Review</span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <h3>Languages</h3>
-            <div class="tag-group">
-              <span class="tag">Mandarin (Native)</span>
-              <span class="tag">English (IELTS 6.5)</span>
-            </div>
-          </article>
-        </div>
+        <a class="text-link" href="blog/">View blog</a>
       </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-shell">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Contact</p>
-          <h2>Let's Connect</h2>
-          <p>
-            I am actively seeking research opportunities and welcome discussions on potential collaboration, graduate study, or research internships. Please feel free to reach out.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="card reveal">
-            <h3>Reach Me</h3>
-            <ul class="contact-list">
-              <li><span>Email</span><a href="mailto:townzc1@gmail.com">townzc1@gmail.com</a></li>
-              <li><span>GitHub</span><a href="https://github.com/Townzc" target="_blank" rel="noopener">github.com/Townzc</a></li>
-              <li><span>Location</span><strong>Chongqing, China &middot; Berkeley, CA (Aug. - Dec. 2026)</strong></li>
-            </ul>
-          </article>
-
-          <article class="card contact-cta-card reveal">
-            <h3>About Me</h3>
-            <p>
-              Tang Zhice is an undergraduate AI researcher at Chongqing University and a Fall 2026 exchange student at UC Berkeley. His work spans EEG and vision foundation models, medical image analysis, and reliable full-stack AI applications.
-            </p>
-            <div class="contact-actions">
-              <a class="button button-primary" href="mailto:townzc1@gmail.com">Email Me</a>
-              <a class="button button-secondary" href="assets/docs/Zhice_Tang_cv.pdf" target="_blank" rel="noopener">Download CV</a>
-            </div>
-          </article>
+      <div id="latest-posts" class="posts-list" aria-live="polite">
+        <div class="empty-state">
+          <p>No posts yet.</p>
+          <span>This space is ready for the first note.</span>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-shell">
-      <p>&copy; <span id="current-year">2026</span> Tang Zhice</p>
-      <a href="#hero">Back to top</a>
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Zhice Tang</p>
+      <p>Built for clarity, kept intentionally simple.</p>
     </div>
   </footer>
-
-  <button class="back-to-top" type="button" aria-label="Back to top">
-    <span aria-hidden="true">↑</span>
-  </button>
 
   <script src="script.js"></script>
 </body>
